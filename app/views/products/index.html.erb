@@ -1,0 +1,32 @@
+<%= flash_messages %>
+<h2>Products List</h2>
+<div class="product-block ">
+
+
+  <div class="row">
+    <div class="col-3">Name</div>
+    <div class="col-3">Price</div>
+    <div class="col-3">Creator</div>
+    <div class="col-3">Options</div>
+  </div>
+
+
+  <% @products.each do |product| %>
+  <div class="row">
+    <div class="col-3"><%= product.name %></div>
+    <div class="col-3">$<%= product.price %></div>
+    <div class="col-3"><%= product.user.try(:email) %></div>
+    <div class="col-3">
+      <%= link_to 'Show', product_path(product), class: "btn btn-info" %>
+      <%= link_to 'Edit', edit_product_path(product), class: "btn  btn-warning" %>
+      <%= link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+    </div>
+  </div>
+</br>
+  <% end %>
+<div class="center">
+  <%= will_paginate%>
+</div>
+ 
+</div>
+<%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
