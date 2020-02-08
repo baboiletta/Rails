@@ -1,0 +1,43 @@
+
+
+<% if current_user.nil? %>
+<%= link_to "Sign In", new_user_session_path, class: 'login-button' %></br>
+<%= link_to "Log out", destroy_user_session_path, method: :delete %></br>
+<% end %>
+<% if user_signed_in? %>
+
+  <%= link_to('Edit registration', edit_user_registration_path) %> </br>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+
+<% else %>
+
+  <%= link_to('Register', new_user_registration_path)  %></br>
+  <%= link_to('Login', new_user_session_path)  %>  
+
+<% end %>
+<% if can? :manage, User %>
+	<p>Visible only for superadmins and supervisors! </p>
+<% end %>
+
+
+<hr/>
+<div class="row">
+  <div class="background">
+    <div class="title">
+      <h4>Cam nhan cua khach hang ve thuocsi</h4>
+    </div>
+   <div class="row">
+     <div class="col-sm-12">
+      <div class="one">
+        <img src="https://thuocsi.vn/assets/homepage/bac_si_1-62517bcb82167b9ae893334e6c5ae1664ad506b9dcc5706be646bb322157d245.jpg" alt="">
+        <h4 class="display-3">Co Lan Anh</h4>z
+        <p>Chủ nhà thuốc Hòa Bình - Buôn Mê Thuột</p>
+        <span class="btn btn-success">"Địa chỉ đáng tin cậy. Đầy đủ hàng, giao hàng nhanh và thuận tiện"</span>
+      </div>
+     </div>
+    
+   </div>
+    
+
+  </div>
+</div>

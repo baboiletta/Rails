@@ -1,0 +1,67 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$container-max-widths: (
+  sm: 640px,
+  md: 820px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$c-jade:     #00b46e;
+$c-sun:      #f9b514;
+$c-facebook: #3b5998;
+$c-zalo:     #0f8edd;
+$c-blue-haze:#C3CCDC;
+$c-background-transparent: rgba(255, 255, 255, 0.96);
+$c-gray: #f8f9fa;
+$c-p: #138496;
+
+
+// Override bootstrap
+$red:        #dc3545 !default;
+$primary:   $c-jade !default;
+$secondary: $c-sun !default;
+$error:     $red !default;
+$body-bg:   #f4f7fc !default;
+
+$border-color: rgba(0, 0, 0, .125);
+
+$mainBg: linear-gradient(102.04deg, $primary 0%, #9AC100 100%);
+
+$notificationColor: #919AA3;
+$emptyNotificationColor: #FF4FAE;
+$currentColor: $secondary;
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+    .background{
+        background: $c-gray;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .title{
+            width: 100%;
+            h4{
+                font-size: 2rem;
+                text-align: center;
+                color: $c-jade;
+            }
+        }
+    }
+    .one{
+        img {
+            border-radius: 50%;
+            height: 250px;
+            margin: 0 auto 1rem;
+        }
+    }
+
+
+
+
+
+
+

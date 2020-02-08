@@ -1,0 +1,15 @@
+<%= form_tag '/new_order_email' do |form| %>
+	<div class="field">
+		Email<br />
+    <%= email_field_tag :email %>
+  </div>
+
+	<div class="field">
+		Content<br />
+    <%= text_area_tag :content, nil, rows: 10, cols: 25 %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Send", class: "btn btn-large btn-primary"%>
+  </div>
+<% end %>
